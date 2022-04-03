@@ -1,0 +1,17 @@
+<% if current_user %>
+  <div class="main-content">
+    <h1>Merchants List</h1>
+    <form class="d-flex" action="/search">
+      <input class="form-control me-2 w-25" type="search" name="q" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-dark" type="submit">Search</button>
+    </form>
+    <div class="row row-cols-1 row-cols-md-5 g-4">
+      <% @merchants.each do |merchant| %>
+        <%= render merchant %>
+
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <div class="centered">To view the entire list of merchants, you need to log in</div>
+<% end %>

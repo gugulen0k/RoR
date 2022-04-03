@@ -1,0 +1,15 @@
+<div class="col" id="<%= dom_id merchant %>">
+  <div class="card h-100" style="width: 250px;">
+    <div class="card-header fs-5 fw-bold text-center"><%= merchant.name %></div>
+    <div class="card-body">
+      <p class="card-text"><p class="card-subtitle fst-italic text-muted">City:</p> <%= merchant.city %></p>
+      <p class="card-text"><p class="card-subtitle fst-italic text-muted">Street:</p> <%= merchant.street %></p>
+      <p class="card-text"><p class="card-subtitle fst-italic text-muted">Country code:</p> <%= merchant.country_code %></p>
+    </div>
+    <% if current_user.admin? %>
+      <div class="card-footer text-center">
+        <%= link_to "Show", merchant, class: 'btn btn-outline-dark' %>
+      </div>
+    <% end %>
+  </div>
+</div>

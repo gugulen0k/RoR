@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 60px; margin-bottom: 50px">
+  <div class="container-fluid">
+    <%= link_to "Merchants List", root_path, class: "navbar-brand fs-4" %>
+
+    <% if current_user %>
+
+      <div class="d-flex align-items-center ">
+        <span class="text-white mx-3">Hello, <%= current_user.email %></span>
+        <% if current_user.admin? %>
+          <%= link_to 'Dashboard', merchants_path, class: "btn btn-outline-light mx-1" %>
+        <% end %>
+        <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-light mx-1" %>
+        <%= link_to 'Log out', destroy_user_session_path, 'data-turbo-method': :delete, class: "btn btn-outline-light mx-1" %>
+      </div>
+
+    <% else %>
+
+      <div class="d-flex">
+        <%= link_to 'Log in', new_user_session_path, class: "btn btn-outline-light mx-1"%>
+        <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-outline-light mx-1"%>
+      </div>
+
+    <% end %>
+  </div>
+</nav>

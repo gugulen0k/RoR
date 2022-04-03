@@ -1,0 +1,12 @@
+<div class="merchants-list">
+  <h1>Merchants</h1>
+
+  <%= link_to "New merchant", new_merchant_path, class: 'btn btn-outline-dark', style: "width: 150px" %>
+
+  <div class="row row-cols-1 row-cols-md-5 g-4" id="merchants">
+    <% @merchants.each do |merchant| %>
+      <%= render merchant %>
+    <% end %>
+  </div>
+
+</div>

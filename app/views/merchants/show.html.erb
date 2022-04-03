@@ -1,0 +1,11 @@
+<div class="d-flex flex-column gap-3" style="width: max-content; margin: 0 auto;">
+
+  <%= render @merchant %>
+
+  <div class="d-flex justify-content-between">
+    <%= link_to "Back", merchants_path, class: "btn btn-outline-dark" %>
+    <%= link_to "Edit", edit_merchant_path(@merchant), class: "btn btn-outline-dark" %>
+    <%= button_to "Destroy", @merchant, method: :delete, class: "btn btn-outline-dark" %>
+  </div>
+
+</div>
