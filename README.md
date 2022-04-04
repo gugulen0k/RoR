@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Implemented requirements:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* The application should use PostgreSQL 
+* Basic authentication using devise gem
+* CRUD for Merchants (replaced `extra(jsonb)` field with `phone(string)` and `website(string)` fields)
+* Validations for each merchant
+* Full-text search filter by merchant name
+* Integrated **Bootstrap** and added some css styles to the created pages so they look good
+* Roles for users, so they can(not) CRUD merchants depending on their role
